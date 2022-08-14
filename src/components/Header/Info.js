@@ -6,9 +6,21 @@ const Wrapper = styled.div.attrs({
   color: #fff;
   padding: 19px 0;
 
-    .logo {
-        
+  .logo {
+    font-size: 3rem;
+    cursor: pointer;
+    letter-spacing: 0.1px;
+
+    &:hover {
+      color: var(--primary-color);
     }
+  }
+
+  .sub-logo {
+    font-size: 1.2rem;
+    cursor: pointer;
+    letter-spacing: 0.1px;
+  }
     
   .icon {
     font-size: 38px;
@@ -41,9 +53,11 @@ function Info() {
   return (
     <Wrapper>
       <div className="row">
-        <div className="col-5 d-flex flex-column text-uppercase">
-          <span className="logo fw-bold fs-1">Academia</span>
-          <span className="sub-logo fw-semibold fs-5">Online euducation & learning</span>
+        <div className="col col-lg-5 d-flex text-uppercase">
+          <div className="d-flex flex-column">
+            <div className="logo fw-bold">Academia</div>
+            <div className="sub-logo fw-semibold">Online euducation & learning</div>
+          </div>
         </div>
         <div className="col d-flex align-items-center">
           <i className="icon bi bi-clock"></i>

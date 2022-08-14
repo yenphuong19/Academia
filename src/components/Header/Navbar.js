@@ -9,6 +9,11 @@ const Wrapper = styled.div.attrs({
 
   .navbar-item {
     padding: 22px 25px;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--primary-color);
+    }
   }
   .button {
     background-color: var(--primary-color);

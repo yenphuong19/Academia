@@ -5,6 +5,7 @@
 
 :root {
   --primary-color: #1eb2a6;
+  --text-normal-color: #000;
 
 }
 * {
@@ -20,6 +21,7 @@ html {
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.6rem;
+  background-color: #f8f8f8;
 }
 
 ul {
@@ -33,7 +35,7 @@ li {
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: var(--text-normal-color);
 }
 
 .btn,
@@ -43,14 +45,68 @@ a {
   font-weight: 700;
   border: none;
   text-transform: uppercase;
+  box-shadow: 0 24px 36px -11px rgba(255, 255, 255,0.2);
 }
 
 .btn-primary {
   background-color: var(--primary-color);
+
+  &:hover {
+    background-color: var(--primary-color);
+    opacity: 0.8;
+  }
+}
+
+.text-primary-color {
+  color: var(--primary-color);
 }
 
 .btn-light {
   color: var(--primary-color);
+  background-color: #fff;
+  border: 1px solid var(--primary-color);
+
+  &:hover{
+    background-color: var(--primary-color);
+    color: #fff;
+  }
+}
+
+.btn-hover:hover {
+  color: #fff;
+  background-color: var(--primary-color);
 }
 
 
+h1 {
+  font-size: 4.6rem;
+  font-weight: 600;
+  padding-bottom: 25px;
+  line-height: 66px;
+}
+
+h2 {
+  font-size: 2.6rem;
+  font-weight: 600;
+  line-height: 38px;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 30px;
+}
+
+h4 {
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-weight: 700;
+  padding-bottom: 15px;
+  font-size: 1.6rem;
+}
+
+p {
+  color: #999;
+  text-align: left;
+  line-height: 28px;
+}

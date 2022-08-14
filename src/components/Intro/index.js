@@ -9,7 +9,7 @@ const Wrapper = styled.div.attrs({
   background: url("https://preview.colorlib.com/theme/academia/images/xbg_1.jpg.pagespeed.ic.Qvddt6BzWR.webp")
     no-repeat;
   background-size: cover;
-  background-position: fixed;
+  background-attachment: fixed;
   
   .sub-heading {
     color: rgba(255,255,255,0.7);
@@ -46,7 +46,7 @@ function Intro() {
                 Get started now!
                 <i class="bi bi-arrow-right ps-4"></i>
               </a>
-              <a className="btn btn-light p-4 px-5">
+              <a className="btn btn-light p-4 px-5 border-0">
                 View course
                 <i class="bi bi-arrow-right ps-4"></i>
               </a>
