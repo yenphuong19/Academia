@@ -59,6 +59,12 @@ function Footer () {
                                     About us
                                 </a>
                             </li>
+                            <li>
+                                <a href="#">
+                                    <i class="bi bi-arrow-right-short text-primary-color"></i>
+                                    About us
+                                </a>
+                            </li>
                         </ul>
                     </div>
                     <div className="col-lg-2">3</div>
