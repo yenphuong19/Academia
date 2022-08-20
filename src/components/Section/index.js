@@ -1,5 +1,12 @@
 import { Fragment } from "react";
 import styled from "styled-components";
+import {
+  ALL_COURSES,
+  BLOGS,
+  POPULAR_COURSES,
+  PRICINGS,
+  STUDENTS
+} from "../../constants";
 import BlogItem from "./BlogItem";
 import CourseItem from "./CourseItem";
 import PopularItem from "./PopularItem";
@@ -7,88 +14,108 @@ import PriceItem from "./PriceItem";
 import StudentItem from "./StudentItem";
 
 const Wrapper = styled.div.attrs({
-    className: '',
+  className: ""
 })`
-    padding-top: 128px;
-    text-align: center;
+  padding-top: 128px;
+  text-align: center;
 `;
 
-function Section () {
-    return (
-        <Fragment>
-            <Wrapper>
-                <h4>our courses</h4>
-                <h1 className="mb-5 text-capitalize">Explore Our Popular Online Courses</h1>
-                <div className="container">
-                    <div className="row">
-                        <PopularItem nameCourse="HTML, CSS, and Javascript for Web Developers" instructor="by John Smith" duration="50 lectures (190 hrs)" price="$100 All Course / $15 per month"/>
-                        <PopularItem nameCourse="HTML, CSS, and Javascript for Web Developers" instructor="by John Smith" duration="50 lectures (190 hrs)" price="$100 All Course / $15 per month"/>
-                        <PopularItem nameCourse="HTML, CSS, and Javascript for Web Developers" instructor="by John Smith" duration="50 lectures (190 hrs)" price="$100 All Course / $15 per month"/>
-                    </div>
-                    {/* Slider cho popular courses */}
-                </div>
-            </Wrapper>
+function Section() {
+  return (
+    <Fragment>
+      <Wrapper>
+        <h4>our courses</h4>
+        <h1 className="mb-5 text-capitalize">
+          Explore Our Popular Online Courses
+        </h1>
+        <div className="container">
+          <div className="row">
+            {POPULAR_COURSES.map((item) => (
+              <PopularItem
+                key={item.id}
+                nameCourse={item.name}
+                instructorName={item.instructorName}
+                instructorAvatar={item.instructorAvatar}
+                duration={item.duration}
+                price={item.price}
+              />
+            ))}
+          </div>
+        </div>
+      </Wrapper>
 
-            <Wrapper>
-                <h4>courses</h4>
-                <h1 className="mb-5 text-capitalize">Browse Our Online Courses</h1>
-                <div className="container-xl">
-                    <div className="row g-3">
-                       <CourseItem nameCourse="UI/UX design courses" countCourse="25 courses"/>
-                       <CourseItem nameCourse="graphic design" countCourse="20 courses"/>
-                       <CourseItem nameCourse="marketing" countCourse="8 courses"/>
-                       <CourseItem nameCourse="music" countCourse="8 courses"/>
-                       <CourseItem nameCourse="web management" countCourse="8 courses"/>
-                       <CourseItem nameCourse="heathy & fitness" countCourse="16 courses"/>
-                       <CourseItem nameCourse="information software" countCourse="2 courses"/>
-                       <CourseItem nameCourse="information software" countCourse="2 courses"/>
-                       <CourseItem nameCourse="information software" countCourse="2 courses"/>
-                       <CourseItem nameCourse="information software" countCourse="2 courses"/>
-                       <CourseItem nameCourse="information software" countCourse="2 courses"/>
-                       <CourseItem nameCourse="information software" countCourse="2 courses"/>
-                    </div>
-                </div>
-            </Wrapper>
+      <Wrapper>
+        <h4>courses</h4>
+        <h1 className="mb-5 text-capitalize">Browse Our Online Courses</h1>
+        <div className="container-xl">
+          <div className="row g-3">
+            {ALL_COURSES.map((item) => (
+              <CourseItem
+                key={item.id}
+                nameCourse={item.name}
+                countCourse={item.count}
+              />
+            ))}
+          </div>
+        </div>
+      </Wrapper>
 
-            <Wrapper>
-                <h4>testimonial</h4>
-                <h1 className="mb-5 text-capitalize">Our Successful Students</h1>
-                <div className="container-xl">
-                    <div className="row justify-content-center">
-                        <StudentItem nameStudent="roger scott" position="marketing manager" message="Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts."/>
-                        <StudentItem isActive nameStudent="roger scott" position="marketing manager" message="Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts."/>
-                        <StudentItem nameStudent="roger scott" position="marketing manager" message="Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts."/>
-                    </div>
-                </div>
-            </Wrapper>
+      <Wrapper>
+        <h4>testimonial</h4>
+        <h1 className="mb-5 text-capitalize">Our Successful Students</h1>
+        <div className="container-xl">
+          <div className="row justify-content-center">
+            {STUDENTS.map((item) => (
+              <StudentItem
+                key={item.id}
+                avatar={item.avatar}
+                name={item.name}
+                position={item.position}
+                message={item.message}
+              />
+            ))}
+          </div>
+        </div>
+      </Wrapper>
 
-            <Wrapper>
-                <h4>our blog</h4>
-                <h1 className="mb-5 text-capitalize">recent from blog</h1>
-                <div className="container-xl">
-                    <div className="row justify-content-center">
-                        <BlogItem imageBlog="https://preview.colorlib.com/theme/academia/images/ximage_1.jpg.pagespeed.ic.7R2Zr2FA0t.webp" blogger="admin" date="jan.18 2021" commentCount="3" titleBlog="Build your Dream Software & Engineering Career" contentBlog="A small river named Duden flows by their place and supplies it with the necessary regelialia."/>
-                        <BlogItem imageBlog="https://preview.colorlib.com/theme/academia/images/ximage_2.jpg.pagespeed.ic.LFeFzbiNiA.webp" blogger="creator" date="mar. 03 2021" commentCount="20" titleBlog="Build your Dream Software & Engineering Career" contentBlog="A small river named Duden flows by their place and supplies it with the necessary regelialia."/>
-                        <BlogItem imageBlog="https://preview.colorlib.com/theme/academia/images/ximage_3.jpg.pagespeed.ic.mPHHvHgH24.webp" blogger="stranger" date="sep. 12 2021" commentCount="7" titleBlog="Build your Dream Software & Engineering Career" contentBlog="A small river named Duden flows by their place and supplies it with the necessary regelialia."/>
-                    </div>
-                </div>
-            </Wrapper>
+      <Wrapper>
+        <h4>our blog</h4>
+        <h1 className="mb-5 text-capitalize">recent from blog</h1>
+        <div className="container-xl">
+          <div className="row justify-content-center">
+            {BLOGS.map((item) => (
+              <BlogItem
+                key={item.id}
+                imageBlog={item.thumbnailImage}
+                author={item.author}
+                date={item.date}
+                commentCount={item.commentCount}
+                titleBlog={item.title}
+                contentBlog={item.content}
+              />
+            ))}
+          </div>
+        </div>
+      </Wrapper>
 
-            <Wrapper>
-                <h4>our pricing</h4>
-                <h1 className="mb-5 text-capitalize">pricing & packages</h1>
-                <div className="container-xl">
-                    <div className="row justify-content-center">
-                        <PriceItem typePlan="basic" price="49k" contentPrice="Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts."/>
-                        <PriceItem typePlan="beginer" price="79k" contentPrice="Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts."/>
-                        <PriceItem typePlan="premium" price="109k" contentPrice="Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts."/>
-                        <PriceItem typePlan="ultimate" price="179k" contentPrice="Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts."/>
-                    </div>
-                </div>
-            </Wrapper>
-
-        </Fragment>
-    )
+      <Wrapper>
+        <h4>our pricing</h4>
+        <h1 className="mb-5 text-capitalize">pricing & packages</h1>
+        <div className="container-xl">
+          <div className="row justify-content-center">
+            {PRICINGS.map((item) => (
+              <PriceItem
+                key={item.id}
+                typePlan={item.type}
+                price={item.price}
+                contentPrice={item.content}
+              />
+            ))}
+          </div>
+        </div>
+      </Wrapper>
+    </Fragment>
+  );
 }
 
 export default Section;

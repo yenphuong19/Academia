@@ -21,7 +21,7 @@ const Wrapper = styled.div.attrs({
     cursor: pointer;
     letter-spacing: 0.1px;
   }
-    
+
   .icon {
     font-size: 38px;
     padding-right: 10px;
@@ -53,27 +53,29 @@ function Info() {
   return (
     <Wrapper>
       <div className="row">
-        <div className="col col-lg-5 d-flex text-uppercase">
+        <div className="col-md col-xl-5 d-flex text-uppercase">
           <div className="d-flex flex-column">
             <div className="logo fw-bold">Academia</div>
-            <div className="sub-logo fw-semibold">Online euducation & learning</div>
+            <div className="sub-logo fw-semibold">
+              Online euducation & learning
+            </div>
           </div>
         </div>
-        <div className="col d-flex align-items-center">
+        <div className="col-md d-flex align-items-center">
           <i className="icon bi bi-clock"></i>
           <div className="d-flex flex-column">
             <span>Monday - Friday</span>
             <span className="fw-bold">8:00AM-8:00PM</span>
           </div>
         </div>
-        <div className="col d-flex align-items-center">
+        <div className="col-md d-flex align-items-center">
           <i className="icon bi bi-telephone"></i>
           <div className="d-flex flex-column">
             <span>Call Us</span>
             <span className="fw-bold">+2 392 3929 210</span>
           </div>
         </div>
-        <div className="col d-flex align-items-center justify-content-end">
+        <div className="col-md d-flex align-items-center justify-content-end">
           <ul className="d-flex">
             <li className="social-item d-flex justify-content-center rounded-circle">
               <a href="/">

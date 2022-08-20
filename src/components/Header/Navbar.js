@@ -23,6 +23,10 @@ const Wrapper = styled.div.attrs({
     top: 0;
     bottom: 0;
 
+    &:hover {
+      color: var(--text-normal-color);
+    }
+
     &::before {
       content: "";
       background-color: var(--primary-color);
