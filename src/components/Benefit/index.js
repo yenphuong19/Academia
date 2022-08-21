@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 const Wrapper = styled.div.attrs({
-    className: 'container',
+    className: 'container-xl',
 })`
     .section__image {
-        background: url('https://preview.colorlib.com/theme/academia/images/xabout.jpg.pagespeed.ic.cvAg9veoWl.webp') no-repeat center;
+        background: url('https://preview.colorlib.com/theme/academia/images/xabout.jpg.pagespeed.ic.cvAg9veoWl.webp') no-repeat top center;
         background-size: cover;
     }
 
@@ -46,9 +46,9 @@ const Wrapper = styled.div.attrs({
 function Benefit () {
     return (
         <Wrapper>
-            <div className="row">
-                <div className="section__image col-md-6 gx-lg-5 px-5"></div>
-                <div className="section__container col-md-6 gx-lg-5 p-5 my-5 d-flex flex-column">
+            <div className="row g-xl-5">
+                <div className="section__image col-md-6 "></div>
+                <div className="section__container col-md-6 my-5 d-flex flex-column">
                     <h4>Learn anything</h4>
                     <h1 className="section__heading">Benefits About Online Learning Expertise</h1>
                     <div className="section__content overflow-hidden d-flex flex-column">

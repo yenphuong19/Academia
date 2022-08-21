@@ -28,7 +28,7 @@ function Section() {
         <h1 className="mb-5 text-capitalize">
           Explore Our Popular Online Courses
         </h1>
-        <div className="container">
+        <div className="container-xl">
           <div className="row">
             {POPULAR_COURSES.map((item) => (
               <PopularItem
@@ -54,6 +54,7 @@ function Section() {
                 key={item.id}
                 nameCourse={item.name}
                 countCourse={item.count}
+                backgroundImage={item.image}
               />
             ))}
           </div>

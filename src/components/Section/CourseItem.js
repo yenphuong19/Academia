@@ -7,6 +7,11 @@ const Wrapper = styled.div.attrs({
     background-color: #fff;
     cursor: pointer;
 
+    &__img {
+      background: url('${props => props.img}') no-repeat top center;
+      background-size: cover;
+    }
+
     &__icon {
       color: var(--primary-color);
       font-size: 50px;
@@ -24,11 +29,11 @@ const Wrapper = styled.div.attrs({
 `;
 
 function CourseItem(props) {
-  const { nameCourse, countCourse } = props;
+  const { nameCourse, countCourse, backgroundImage } = props;
   return (
-    <Wrapper>
+    <Wrapper img={backgroundImage}>
       <div className="course-item d-flex flex-column rounded px-4 py-5 h-100">
-        <i className="course-item__icon bi bi-binoculars mb-3"></i>
+        <div className="course-item__img bg-img"></div>
         <div>
           <h3 className="fw-bold text-capitalize mb-3">{nameCourse}</h3>
           <span className="course-item__count fs-5 fw-bold bg-light rounded text-primary-color p-2">

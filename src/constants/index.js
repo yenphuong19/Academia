@@ -115,72 +115,84 @@ export const POPULAR_COURSES = [
 export const ALL_COURSES = [
   {
     id: 1,
+    image: "https://s.udemycdn.com/home/top-categories/lohp-category-design-2x-v2.jpg",
     name: "UI/UX design courses",
     count: 25,
     iconClassName: ""
   },
   {
     id: 2,
+    image: "	https://s.udemycdn.com/home/top-categories/lohp-category-photography-2x-v2.jpg",
     name: "art & design",
     count: 25,
     iconClassName: ""
   },
   {
     id: 3,
+    image: "https://s.udemycdn.com/home/top-categories/lohp-category-design-2x-v2.jpg",
     name: "computer science",
     count: 10,
     iconClassName: ""
   },
   {
     id: 4,
+    image: "https://s.udemycdn.com/home/top-categories/lohp-category-design-2x-v2.jpg",
     name: "history & archeologic",
     count: 19,
     iconClassName: ""
   },
   {
     id: 5,
+    image: "https://s.udemycdn.com/home/top-categories/lohp-category-design-2x-v2.jpg",
     name: "software engineering",
     count: 3,
     iconClassName: ""
   },
   {
     id: 6,
+    image: "	https://s.udemycdn.com/home/top-categories/lohp-category-it-and-software-2x-v2.jpg",
     name: "infomation software",
     count: 21,
     iconClassName: ""
   },
   {
     id: 7,
+    image: "https://s.udemycdn.com/home/top-categories/lohp-category-design-2x-v2.jpg",
     name: "heath & fitness",
     count: 22,
     iconClassName: ""
   },
   {
     id: 8,
+    image: "	https://s.udemycdn.com/home/top-categories/lohp-category-marketing-2x-v2.jpg",
     name: "marketing",
     count: 10,
     iconClassName: ""
   },
   {
     id: 9,
+    image: "https://s.udemycdn.com/home/top-categories/lohp-category-design-2x-v2.jpg",
     name: "graphic design",
     count: 9,
     iconClassName: ""
   },
   {
     id: 10,
+    image: "	https://s.udemycdn.com/home/top-categories/lohp-category-music-2x-v2.jpg",
     name: "music",
     count: 32,
     iconClassName: ""
   },
   {
     id: 11,
+    image: "	https://s.udemycdn.com/home/top-categories/lohp-category-business-2x-v2.jpg",
     name: "business administration",
     count: 7,
     iconClassName: ""
   },
   {
     id: 12,
+    image: "	https://s.udemycdn.com/home/top-categories/lohp-category-development-2x-v2.jpg",
     name: "web development",
     count: 20,
     iconClassName: ""
@@ -310,3 +322,8 @@ export const PRICINGS = [
       "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts."
   }
 ];
+
+export const RESPONSIVE = {
+  mobile: 576,
+  tablet: 992
+}

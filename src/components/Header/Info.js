@@ -1,10 +1,17 @@
 import styled from "styled-components";
+import { RESPONSIVE } from "../../constants";
+import { useViewport } from "../../services/hooks";
 
 const Wrapper = styled.div.attrs({
   className: "container"
 })`
   color: #fff;
-  padding: 19px 0;
+  padding-top: 19px;
+  padding-bottom: 19px;
+
+  .col-md {
+    flex: 1 0 0%;
+  }
 
   .logo {
     font-size: 3rem;
@@ -50,10 +57,14 @@ const Wrapper = styled.div.attrs({
 `;
 
 function Info() {
+  const viewport = useViewport()
+  const isTablet = viewport.width <= RESPONSIVE.tablet
+  const isMobile = viewport.width <= RESPONSIVE.mobile
+
   return (
     <Wrapper>
       <div className="row">
-        <div className="col-md col-xl-5 d-flex text-uppercase">
+        <div className="col-md col-xl-5 d-flex flex-grow-1 text-uppercase">
           <div className="d-flex flex-column">
             <div className="logo fw-bold">Academia</div>
             <div className="sub-logo fw-semibold">
@@ -61,21 +72,21 @@ function Info() {
             </div>
           </div>
         </div>
-        <div className="col-md d-flex align-items-center">
+        <div className={`col-md ${isTablet ? "d-none" : "d-flex"} align-items-center justify-content-end`}>
           <i className="icon bi bi-clock"></i>
           <div className="d-flex flex-column">
             <span>Monday - Friday</span>
             <span className="fw-bold">8:00AM-8:00PM</span>
           </div>
         </div>
-        <div className="col-md d-flex align-items-center">
+        <div className={`col-md ${isTablet ? "d-none" : "d-flex"} align-items-center justify-content-end`}>
           <i className="icon bi bi-telephone"></i>
           <div className="d-flex flex-column">
             <span>Call Us</span>
             <span className="fw-bold">+2 392 3929 210</span>
           </div>
         </div>
-        <div className="col-md d-flex align-items-center justify-content-end">
+        <div className={`col-md ${isMobile ? "d-none" : "d-flex"} align-items-center justify-content-end`}>
           <ul className="d-flex">
             <li className="social-item d-flex justify-content-center rounded-circle">
               <a href="/">
